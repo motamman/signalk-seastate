@@ -2,7 +2,7 @@
 
 **Version 0.5.0-beta.1**
 
-A SignalK plugin that calculates wave height, period, and direction from vessel attitude (pitch, roll, yaw) data. This plugin analyzes vessel motion to derive comprehensive sea state information useful for navigation, weather routing, and vessel performance monitoring.
+A SignalK plugin that calculates approximate wave height, period, and direction from vessel attitude (pitch, roll, yaw) data. This plugin analyzes vessel motion to derive comprehensive sea state information useful for navigation, weather routing, and vessel performance monitoring.
 
 ## Features
 
@@ -142,19 +142,50 @@ The plugin maintains rolling buffers of attitude data for:
 
 ### Wave Height Calibration
 
-The wave height multiplier (K factor) may need adjustment based on:
-- Vessel size and type
-- Sensor location
-- Local sea conditions
-- Comparison with actual wave measurements
+The wave height multiplier (K factor) requires calibration for accurate readings:
 
-### Direction Accuracy
+#### Step-by-Step Calibration Process
 
-Direction calculation accuracy depends on:
-- Quality of heading data
-- Vessel motion characteristics
-- Sea state conditions
-- Sensor placement and calibration
+1. **Collect Reference Data**
+   - Record actual wave height measurements using visual observation, marine weather reports, or other instruments
+   - Note the corresponding plugin output during the same conditions
+   - Collect data across different sea states, if possible
+
+2. **Calculate Calibration Factor**
+   ```
+   New K Factor = Current K Factor × (Actual Wave Height / Plugin Wave Height)
+   ```
+   
+3. **Apply Calibration**
+   - Navigate to SignalK plugin configuration
+   - Adjust "Wave Height Multiplier (K)" setting
+   - Start with default 0.5, typical range is 0.2-1.0
+
+4. **Validation**
+   - Test in known conditions
+   - Compare with marine weather forecasts
+   - Fine-tune based on vessel-specific characteristics
+
+#### Factors Affecting Calibration
+- **Vessel Size**: Larger vessels need lower K factors (0.2-0.4)
+- **Vessel Type**: Displacement hulls vs. planning hulls behave differently
+- **Sensor Location**: Sensors away from vessel center require adjustment
+
+### Direction Calibration
+
+1. **Verify Heading Accuracy**
+   - Ensure magnetic compass is calibrated
+   - Check `navigation.headingMagnetic` accuracy against known bearings
+   - Compensate for magnetic deviation if needed
+
+2. **Test Direction Output**
+   - Compare wave direction with visual observations
+   - Use known wind/wave patterns (e.g., onshore wind creates shoreward waves)
+   - Verify against marine weather direction forecasts
+
+3. **Adjust Smoothing**
+   - Increase smoothing factor (closer to 1.0) for steady conditions
+   - Decrease smoothing factor (closer to 0.1) for rapidly changing seas
 
 ## Troubleshooting
 
