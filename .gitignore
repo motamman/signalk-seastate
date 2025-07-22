@@ -77,3 +77,6 @@ temp/
 test-data/
 *.test.js
 *.spec.js
+
+# Publishing documentation
+PUBLISH.md

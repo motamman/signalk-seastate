@@ -1,5 +1,5 @@
 {
-  "name": "zennora-seastate",
+  "name": "signalk-seastate",
   "version": "0.5.0-beta.1",
   "description": "SignalK plugin to calculate wave height, period, and direction from vessel attitude (pitch, roll, yaw)",
   "main": "dist/index.js",
@@ -34,16 +34,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/motamman/zennora-seastate.git"
+    "url": "https://github.com/signalk/signalk-seastate.git"
   },
-  "homepage": "https://github.com/motamman/zennora-seastate#readme",
+  "homepage": "https://github.com/signalk/signalk-seastate#readme",
   "bugs": {
-    "url": "https://github.com/motamman/zennora-seastate/issues"
+    "url": "https://github.com/signalk/signalk-seastate/issues"
   },
   "signalk": {
     "appSupport": "none",
     "compatibility": ">=2.13.0",
-    "displayName": "Zennora Sea State Calculator"
+    "displayName": "SignalK Sea State Calculator"
   },
   "dependencies": {
     "@signalk/server-api": "^2.7.1"

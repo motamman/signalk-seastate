@@ -34,8 +34,8 @@ function getVesselBasedSource(configuredPrefix: string | undefined, suffix: stri
 export = function (app: ServerAPI): SignalKPlugin {
   const plugin: SignalKPlugin = {} as SignalKPlugin;
 
-  plugin.id = 'zennora-seastate';
-  plugin.name = 'Zennora Sea State Calculator';
+  plugin.id = 'signalk-seastate';
+  plugin.name = 'SignalK Sea State Calculator';
   plugin.description = 'Calculate wave height, period, and direction from vessel attitude (pitch, roll, yaw)';
 
   const state: PluginState = {

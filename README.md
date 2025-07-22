@@ -1,4 +1,4 @@
-# Zennora Sea State Calculator
+# SignalK Sea State Calculator
 
 **Version 0.5.0-beta.1**
 
@@ -20,7 +20,7 @@ A SignalK plugin that calculates approximate wave height, period, and direction 
 Install via npm in your SignalK server:
 
 ```bash
-npm install zennora-seastate
+npm install signalk-seastate
 ```
 
 Or install directly through the SignalK App Store.
@@ -35,7 +35,7 @@ The plugin provides extensive configuration options:
 - **Wave Height Multiplier (K)**: Calibration factor for wave height calculation (default: 0.5)
 - **Baseline K Value**: Baseline calculation value for known conditions (default: 0.1)
 - **Update Rate**: How often calculations are performed in milliseconds (default: 1000ms)
-- **Source Label**: Identifier for derived data (default: "zennora-seastate")
+- **Source Label**: Identifier for derived data (default: "signalk-seastate")
 
 ### Advanced Settings
 
@@ -230,8 +230,8 @@ This plugin is written in TypeScript with full type safety. To contribute:
 
 ```bash
 # Clone repository
-git clone https://github.com/motamman/zennora-seastate.git
-cd zennora-seastate
+git clone https://github.com/signalk/signalk-seastate.git
+cd signalk-seastate
 
 # Install dependencies
 npm install
