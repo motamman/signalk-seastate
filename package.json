@@ -34,11 +34,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/signalk/signalk-seastate.git"
+    "url": "https://github.com/motamman/signalk-seastate.git"
   },
-  "homepage": "https://github.com/signalk/signalk-seastate#readme",
+  "homepage": "https://github.com/motamman/signalk-seastate#readme",
   "bugs": {
-    "url": "https://github.com/signalk/signalk-seastate/issues"
+    "url": "https://github.com/motamman/signalk-seastate/issues"
   },
   "signalk": {
     "appSupport": "none",

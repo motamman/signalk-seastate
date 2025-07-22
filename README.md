@@ -2,7 +2,11 @@
 
 **Version 0.5.0-beta.1**
 
-A SignalK plugin that calculates approximate wave height, period, and direction from vessel attitude (pitch, roll, yaw) data. This plugin analyzes vessel motion to derive comprehensive sea state information useful for navigation, weather routing, and vessel performance monitoring.
+***REQUIRES `navigation.attitude` path***
+
+A SignalK plugin that calculates approximate wave height, period, and direction from vessel attitude (pitch, roll, yaw) data. This plugin analyzes vessel motion to derive comprehensive sea state information useful for navigation, weather routing, and vessel performance monitoring. 
+
+A MacArthur HAT with an IMU installed and set to IMU only in the Openplotter settings will work.
 
 ## Features
 
