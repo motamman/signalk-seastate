@@ -1,6 +1,6 @@
 # SignalK Sea State Calculator
 
-**Version 0.5.0-beta.1**
+**Version 0.5.0-beta.2**
 
 ***REQUIRES `navigation.attitude` path***
 
@@ -260,6 +260,9 @@ MIT License - see LICENSE file for details.
 Contributions welcome! Please feel free to submit issues, feature requests, or pull requests.
 
 ## Changelog
+
+### v0.5.0-beta.2
+- Edited README for clarity
 
 ### v0.5.0-beta.1
 - Complete TypeScript rewrite
