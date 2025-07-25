@@ -732,7 +732,7 @@ export = function (app: ServerAPI): SignalKPlugin {
     }
     logParts.push(`(motion: ${motionMagnitude.toFixed(2)}°)`);
 
-    console.log(`[${plugin.id}] ${logParts.join(', ')}`);
+    // console.log(`[${plugin.id}] ${logParts.join(', ')}`);
   }
 
   // Emit SignalK delta message
